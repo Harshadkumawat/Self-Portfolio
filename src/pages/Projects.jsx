@@ -26,46 +26,35 @@ const Projects = () => {
 
         const mappedProjects = data.map((repo) => {
           const imageUrl = `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${repo.name}/main/assets/${repo.name}.png`;
+
           let category = "other";
           const name = repo.name.toLowerCase();
-          // const desc = (repo.description || "").toLowerCase();
           const topics = (repo.topics || []).map((t) => t.toLowerCase());
 
-          // Priority list
           const checks = [
             { keywords: ["frontend"], value: "frontend" },
             { keywords: ["ui"], value: "ui" },
             { keywords: ["clone"], value: "clone" },
-            { keywords: ["fullstack", "backend"], value: "fullstack" },
-            { keywords: ["javascript", "js"], value: "js" },
+            { keywords: ["fullstack", "backend"], value: "backend" },
+            { keywords: ["javascript", "js"], value: "javascript" }, // ✅ both supported
           ];
 
-          // Step 1: Description
-          // for (const check of checks) {
-          //   if (check.keywords.some((kw) => desc.includes(kw))) {
-          //     category = check.value;
-          //     break;
-          //   }
-          // }
-
-          // Step 2: Name
-          if (category === "other") {
-            for (const check of checks) {
-              if (check.keywords.some((kw) => name.includes(kw))) {
-                category = check.value;
-                break;
-              }
+          // Step 1: Check topics first (more accurate)
+          for (const check of checks) {
+            if (
+              topics.some((topic) =>
+                check.keywords.some((kw) => topic.includes(kw))
+              )
+            ) {
+              category = check.value;
+              break;
             }
           }
 
-          // ✅ Step 3: Topics — allow partial match (fix for your case)
+          // Step 2: Check name if still "other"
           if (category === "other") {
             for (const check of checks) {
-              if (
-                topics.some((topic) =>
-                  check.keywords.some((kw) => topic.includes(kw))
-                )
-              ) {
+              if (check.keywords.some((kw) => name.includes(kw))) {
                 category = check.value;
                 break;
               }
