@@ -73,7 +73,7 @@ const Home = () => {
               description="No description available."
               image="https://raw.githubusercontent.com/Harshadkumawat/Crypto-app/main/assets/Crypto-app.png"
               tags={["React"]}
-              demoLink="crypto-app-roan-phi.vercel.app"
+              demoLink="https://crypto-app-roan-phi.vercel.app/"
               codeLink="https://github.com/Harshadkumawat/Crypto-app"
               delay={100}
             />
