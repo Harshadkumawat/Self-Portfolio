@@ -84,7 +84,7 @@ const Hero = () => {
             <div className="relative w-96 h-96">
               <div className="absolute inset-0 bg-primary/20 rounded-full animate-pulse-slow blur-xl"></div>
               <img
-                src="/public/Harshadkumawat.png"
+                src="/Harshadkumawat.png"
                 alt="Developer Profile"
                 className="absolute inset-0 object-cover object-center rounded-full w-full h-full z-10 animate-float"
               />
