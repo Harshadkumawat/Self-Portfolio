@@ -35,11 +35,14 @@ const Projects = () => {
             { keywords: ["frontend"], value: "frontend" },
             { keywords: ["ui"], value: "ui" },
             { keywords: ["clone"], value: "clone" },
-            { keywords: ["fullstack", "backend"], value: "backend" },
-            { keywords: ["javascript", "js"], value: "javascript" }, // ✅ both supported
+            {
+              keywords: ["fullstack", "backend", "mern stack", "full stack"],
+              value: "fullstack",
+            },
+            { keywords: ["javascript", "js"], value: "javascript" },
           ];
 
-          // Step 1: Check topics first (more accurate)
+          // Step 1: Check topics first
           for (const check of checks) {
             if (
               topics.some((topic) =>
@@ -66,7 +69,7 @@ const Projects = () => {
             title: repo.name,
             description: repo.description || "No description available.",
             image: imageUrl,
-            tags: [],
+            tags: [], // optionally fill later
             category,
             demoLink: repo.homepage || "#",
             codeLink: repo.html_url,
@@ -94,7 +97,7 @@ const Projects = () => {
     "frontend",
     "ui",
     "clone",
-    "backend",
+    "fullstack", // ✅ exactly same as check.value
     "javascript",
   ];
 

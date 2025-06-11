@@ -79,20 +79,20 @@ const Home = () => {
             />
             <ProjectCard
               title="News-Web"
-              description= "A modern news application built with React and Tailwind CSS that fetches and displays news articles based on user-selected topics using the News API."
+              description="A modern news application built with React and Tailwind CSS that fetches and displays news articles based on user-selected topics using the News API."
               image="https://raw.githubusercontent.com/Harshadkumawat/News-Web/main/assets/News-Web.png"
-              tags={[ "React",  "Tailwind"]}
+              tags={["React", "Tailwind"]}
               demoLink="https://news-web-lac.vercel.app/"
               codeLink="https://github.com/Harshadkumawat/News-Web"
               delay={200}
             />
             <ProjectCard
-              title="Finance Dashboard"
-              description="An analytics dashboard for tracking financial data with interactive visualizations and reports"
-              image="https://images.pexels.com/photos/7567434/pexels-photo-7567434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              tags={["Next.js", "Chart.js", "Supabase", "Auth0"]}
-              demoLink="#"
-              codeLink="#"
+              title="InfluenceBridge"
+              description="🎯 A modern influencer booking platform where brands can discover, connect, and collaborate with influencers. Built with React, Node.js, Express, and MongoDB."
+              image="https://github.com/Harshadkumawat/InfluenceBridge/blob/main/assets/InfluenceBridge.png?raw=true"
+              tags={["Exprees.js", "MongoDB", "Node.js", "React"]}
+              demoLink="https://influence-bridge.vercel.app/"
+              codeLink="https://github.com/Harshadkumawat/InfluenceBridge"
               delay={300}
             />
           </div>
