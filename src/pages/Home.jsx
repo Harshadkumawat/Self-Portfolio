@@ -69,6 +69,15 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ProjectCard
+              title="InfluenceBridge"
+              description="🎯 A modern influencer booking platform where brands can discover, connect, and collaborate with influencers. Built with React, Node.js, Express, and MongoDB."
+              image="https://github.com/Harshadkumawat/InfluenceBridge/blob/main/assets/InfluenceBridge.png?raw=true"
+              tags={["Exprees.js", "MongoDB", "Node.js", "React"]}
+              demoLink="https://influence-bridge.vercel.app/"
+              codeLink="https://github.com/Harshadkumawat/InfluenceBridge"
+              delay={300}
+            />
+            <ProjectCard
               title="Crypto-app"
               description="No description available."
               image="https://raw.githubusercontent.com/Harshadkumawat/Crypto-app/main/assets/Crypto-app.png"
@@ -85,15 +94,6 @@ const Home = () => {
               demoLink="https://news-web-lac.vercel.app/"
               codeLink="https://github.com/Harshadkumawat/News-Web"
               delay={200}
-            />
-            <ProjectCard
-              title="InfluenceBridge"
-              description="🎯 A modern influencer booking platform where brands can discover, connect, and collaborate with influencers. Built with React, Node.js, Express, and MongoDB."
-              image="https://github.com/Harshadkumawat/InfluenceBridge/blob/main/assets/InfluenceBridge.png?raw=true"
-              tags={["Exprees.js", "MongoDB", "Node.js", "React"]}
-              demoLink="https://influence-bridge.vercel.app/"
-              codeLink="https://github.com/Harshadkumawat/InfluenceBridge"
-              delay={300}
             />
           </div>
 
